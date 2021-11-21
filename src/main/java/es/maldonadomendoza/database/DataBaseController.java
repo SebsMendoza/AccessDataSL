@@ -1,6 +1,5 @@
 package es.maldonadomendoza.database;
 
-import es.maldonadomendoza.utils.ApplicationProperties;
 import lombok.NonNull;
 import org.apache.ibatis.jdbc.ScriptRunner;
 
@@ -41,14 +40,6 @@ public class DataBaseController {
     private PreparedStatement preparedStatement;
 
     /**
-     * Constructor privado para Singleton
-     */
-    private DataBaseController() {
-        // System.out.println("Mi nombre es: " + this.nombre);
-        initConfig();
-    }
-
-    /**
      * Devuelve una instancia del controlador
      *
      * @return instancia del controladorBD
@@ -61,32 +52,14 @@ public class DataBaseController {
     }
 
     /**
-     * Carga la configuración de acceso al servidor de Base de Datos
-     * Puede ser directa "hardcodeada" o asignada dinámicamente a traves de ficheros .env o properties
-     */
-    private void initConfig() {
-        // Leemos los datos de la base de datos que pueden estar en
-        // porperties o en .env
-        // imaginemos que el usuario y pasword estaán en .env y el resto en application.properties
-        // si no los rellenamos aquí.
-        ApplicationProperties properties = new ApplicationProperties();
-        serverUrl = properties.readProperty("database.server.url");
-        serverPort = properties.readProperty("database.server.port");
-        dataBaseName = properties.readProperty("database.name");
-        jdbcDriver = properties.readProperty("database.jdbc.driver");
-    }
-
-    /**
      * Abre la conexión con el servidor  de base de datos
      *
      * @throws SQLException Servidor no accesible por problemas de conexión o datos de acceso incorrectos
      */
     public void open() throws SQLException {
-        //String url = "jdbc:sqlite:"+this.ruta+this.bbdd; //MySQL jdbc:mysql://localhost/prueba", "root", "1daw"
-        String url = "jdbc:mariadb://" + this.serverUrl + ":" + this.serverPort + "/" + this.dataBaseName;
-        // System.out.println(url);
+        String url = "jdbc:sqlite:adsl.db";
         // Obtenemos la conexión
-        connection = DriverManager.getConnection(url, user, password);
+        connection = DriverManager.getConnection(url);
     }
 
     /**
