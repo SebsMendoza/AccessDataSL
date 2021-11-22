@@ -13,23 +13,6 @@ import java.util.Optional;
 
 public class DataBaseController {
     private static DataBaseController controller;
-    @NonNull
-    private String serverUrl;
-    @NonNull
-    private String serverPort;
-    @NonNull
-    private String dataBaseName;
-    @NonNull
-    private String user;
-    @NonNull
-    private String password;
-
-    /*
-   Tipos de Driver
-   SQLite: "org.sqlite.JDBC";
-   MySQL: "com.mysql.jdbc.Driver"
-   MariaDB: com.mysql.cj.jdbc.Driver
-    */
 
     @NonNull
     private String jdbcDriver;
@@ -57,7 +40,7 @@ public class DataBaseController {
      * @throws SQLException Servidor no accesible por problemas de conexión o datos de acceso incorrectos
      */
     public void open() throws SQLException {
-        String url = "jdbc:sqlite:adsl.db";
+        String url = "jdbc:sqlite:src/main/resources/adsl.db";
         // Obtenemos la conexión
         connection = DriverManager.getConnection(url);
     }

@@ -2,6 +2,8 @@ package es.maldonadomendoza;
 
 import es.maldonadomendoza.database.DataBaseController;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
@@ -28,6 +30,23 @@ public class AccessData {
             }
         } catch (SQLException e) {
             System.err.println("Error al conectar al servidor de Base de Datos: " + e.getMessage());
+            System.exit(1);
+        }
+    }
+
+    public void initDataBase() {
+        String sqlFile = System.getProperty("user.dir") + File.separator + "sql" + File.separator + "adsl.sql";
+        System.out.println(sqlFile);
+        DataBaseController controller = DataBaseController.getInstance();
+        try {
+            controller.open();
+            controller.initData(sqlFile);
+            controller.close();
+        } catch (SQLException e) {
+            System.err.println("Error al conectar al servidor de Base de Datos: " + e.getMessage());
+            System.exit(1);
+        } catch (FileNotFoundException e) {
+            System.err.println("Error al leer el fichero de datos iniciales: " + e.getMessage());
             System.exit(1);
         }
     }
