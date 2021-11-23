@@ -158,10 +158,4 @@ public class DataBaseController {
         }
         return preparedStatement.executeUpdate();
     }
-
-    public void initData(@NonNull String sqlFile) throws FileNotFoundException {
-        ScriptRunner sr = new ScriptRunner(connection);
-        Reader reader = new BufferedReader(new FileReader(sqlFile));
-        sr.runScript(reader);
-    }
 }
