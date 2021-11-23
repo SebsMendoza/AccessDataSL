@@ -3,10 +3,7 @@ package es.maldonadomendoza.database;
 import lombok.NonNull;
 import org.apache.ibatis.jdbc.ScriptRunner;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.Reader;
+import java.io.*;
 import java.sql.*;
 import java.util.Optional;
 
@@ -40,7 +37,8 @@ public class DataBaseController {
      * @throws SQLException Servidor no accesible por problemas de conexión o datos de acceso incorrectos
      */
     public void open() throws SQLException {
-        String url = "jdbc:sqlite:src/main/resources/adsl.db";
+        String url = "jdbc:sqlite:" + System.getProperty("user.dir") + File.separator + "resources" + File.separator +
+                "adsl.db";
         // Obtenemos la conexión
         connection = DriverManager.getConnection(url);
     }
