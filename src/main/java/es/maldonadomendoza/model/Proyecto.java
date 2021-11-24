@@ -1,33 +1,32 @@
 package es.maldonadomendoza.model;
 
 
-
 import java.util.Date;
 import java.util.List;
 
 public class Proyecto {
     private long id;
     private long idJefe;
-    private List<Equipo> equipos;
+    private long idDpt;
     private String nombre;
     private double presupuesto;
     private Date fechaInicio;
     private Date fechaFin;
     private List<String> tecnologias;
-    private Repositorio repositorio;
-    private long idDpt;
+    private List<Equipo> equipos;
+    private List<Repositorio> repositorios;
 
-    public Proyecto(long id, long idJefe, List<Equipo> equipos, String nombre, double presupuesto, Date fechaInicio, Date fechaFin, List<String> tecnologias, Repositorio repositorio, long idDpt) {
+    public Proyecto(long id, long idJefe, long idDpt, String nombre, double presupuesto, Date fechaInicio, Date fechaFin, List<String> tecnologias, List<Equipo> equipos, List<Repositorio> repositorios) {
         this.id = id;
         this.idJefe = idJefe;
-        this.equipos = equipos;
+        this.idDpt = idDpt;
         this.nombre = nombre;
         this.presupuesto = presupuesto;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.tecnologias = tecnologias;
-        this.repositorio = repositorio;
-        this.idDpt = idDpt;
+        this.equipos = equipos;
+        this.repositorios = repositorios;
     }
 
     public long getId() {
@@ -46,12 +45,12 @@ public class Proyecto {
         this.idJefe = idJefe;
     }
 
-    public List<Equipo> getEquipos() {
-        return equipos;
+    public long getIdDpt() {
+        return idDpt;
     }
 
-    public void setEquipos(List<Equipo> equipos) {
-        this.equipos = equipos;
+    public void setIdDpt(long idDpt) {
+        this.idDpt = idDpt;
     }
 
     public String getNombre() {
@@ -94,19 +93,19 @@ public class Proyecto {
         this.tecnologias = tecnologias;
     }
 
-    public Repositorio getRepositorio() {
-        return repositorio;
+    public List<Equipo> getEquipos() {
+        return equipos;
     }
 
-    public void setRepositorio(Repositorio repositorio) {
-        this.repositorio = repositorio;
+    public void setEquipos(List<Equipo> equipos) {
+        this.equipos = equipos;
     }
 
-    public long getIdDpt() {
-        return idDpt;
+    public List<Repositorio> getRepositorios() {
+        return repositorios;
     }
 
-    public void setIdDpt(long idDpt) {
-        this.idDpt = idDpt;
+    public void setRepositorios(List<Repositorio> repositorios) {
+        this.repositorios = repositorios;
     }
 }

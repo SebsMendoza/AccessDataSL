@@ -1,24 +1,23 @@
 package es.maldonadomendoza.model;
 
 
-
 import java.util.List;
 
 
 public class DptDesarrollo {
     private long id;
-    private String nombre;
     private long idJefeDpt;
+    private String nombre;
     double presupuesto;
     private List<Proyecto> finalizado;
     private List<Proyecto> activo;
-    private List<Proyecto> historico;
+    private List<Programador> historico;
     private List<Programador> programadores;
 
-    public DptDesarrollo(long id, String nombre, long idJefeDpt, double presupuesto, List<Proyecto> finalizado, List<Proyecto> activo, List<Proyecto> historico, List<Programador> programadores) {
+    public DptDesarrollo(long id, long idJefeDpt, String nombre, double presupuesto, List<Proyecto> finalizado, List<Proyecto> activo, List<Programador> historico, List<Programador> programadores) {
         this.id = id;
-        this.nombre = nombre;
         this.idJefeDpt = idJefeDpt;
+        this.nombre = nombre;
         this.presupuesto = presupuesto;
         this.finalizado = finalizado;
         this.activo = activo;
@@ -34,20 +33,20 @@ public class DptDesarrollo {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public long getIdJefeDpt() {
         return idJefeDpt;
     }
 
     public void setIdJefeDpt(long idJefeDpt) {
         this.idJefeDpt = idJefeDpt;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public double getPresupuesto() {
@@ -74,11 +73,11 @@ public class DptDesarrollo {
         this.activo = activo;
     }
 
-    public List<Proyecto> getHistorico() {
+    public List<Programador> getHistorico() {
         return historico;
     }
 
-    public void setHistorico(List<Proyecto> historico) {
+    public void setHistorico(List<Programador> historico) {
         this.historico = historico;
     }
 

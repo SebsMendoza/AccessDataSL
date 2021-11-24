@@ -7,9 +7,9 @@ import java.util.List;
 public class Comite {
     private long id;
     private List<Programador> programadores;
-    private List<Issue> issues;
+    private Issue issues;
 
-    public Comite(long id, List<Programador> programadores, List<Issue> issues) {
+    public Comite(long id, List<Programador> programadores, Issue issues) {
         this.id = id;
         this.programadores = programadores;
         this.issues = issues;
@@ -31,11 +31,11 @@ public class Comite {
         this.programadores = programadores;
     }
 
-    public List<Issue> getIssues() {
+    public Issue getIssues() {
         return issues;
     }
 
-    public void setIssues(List<Issue> issues) {
+    public void setIssues(Issue issues) {
         this.issues = issues;
     }
 }

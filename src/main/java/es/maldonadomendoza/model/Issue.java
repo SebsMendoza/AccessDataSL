@@ -1,27 +1,32 @@
 package es.maldonadomendoza.model;
 
 
-
 import java.util.Date;
+import java.util.List;
+
 public class Issue {
     private long id;
+    private long idJefe;
     private String titulo;
     private String texto;
-    private Date   fecha;
+    private Date fecha;
+    private boolean estado;
     private Repositorio repositorio;
     private Comite programadores;
     private Repositorio proyecto;
-    private boolean estado;
+    private List<Commit> commits;
 
-    public Issue(long id, String titulo, String texto, Date fecha, Repositorio repositorio, Comite programadores, Repositorio proyecto, boolean estado) {
+    public Issue(long id, long idJefe, String titulo, String texto, Date fecha, boolean estado, Repositorio repositorio, Comite programadores, Repositorio proyecto, List<Commit> commits) {
         this.id = id;
+        this.idJefe = idJefe;
         this.titulo = titulo;
         this.texto = texto;
         this.fecha = fecha;
+        this.estado = estado;
         this.repositorio = repositorio;
         this.programadores = programadores;
         this.proyecto = proyecto;
-        this.estado = estado;
+        this.commits = commits;
     }
 
     public long getId() {
@@ -30,6 +35,14 @@ public class Issue {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getIdJefe() {
+        return idJefe;
+    }
+
+    public void setIdJefe(long idJefe) {
+        this.idJefe = idJefe;
     }
 
     public String getTitulo() {
@@ -56,6 +69,14 @@ public class Issue {
         this.fecha = fecha;
     }
 
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
     public Repositorio getRepositorio() {
         return repositorio;
     }
@@ -80,11 +101,11 @@ public class Issue {
         this.proyecto = proyecto;
     }
 
-    public boolean isEstado() {
-        return estado;
+    public List<Commit> getCommits() {
+        return commits;
     }
 
-    public void setEstado(boolean estado) {
-        this.estado = estado;
+    public void setCommits(List<Commit> commits) {
+        this.commits = commits;
     }
 }

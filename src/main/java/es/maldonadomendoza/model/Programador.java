@@ -1,35 +1,43 @@
 package es.maldonadomendoza.model;
 
 
-
-
 import java.util.Date;
 import java.util.List;
 
 
 public class Programador {
     private long id;
-    private String nombre;
-    private Date fecha_alta;
     private long idDpt;
+    private long idEquipo;
     private long idComite;
+    private String nombre;
+    private String experto;
+    private Date alta;
+    private double salario;
+    private String password;
     private List<Proyecto> proyectos;
     private List<Commit> commits;
     private List<Issue> issues;
     private List<String> conocimientos;
-    private double salario;
 
-    public Programador(long id, String nombre, Date fecha_alta, long idDpt, long idComite, List<Proyecto> proyectos, List<Commit> commits, List<Issue> issues, List<String> conocimientos, double salario) {
+
+    public Programador(long id, long idDpt, long idEquipo, long idComite, String nombre, String experto, Date alta, double salario, String password, List<Proyecto> proyectos, List<Commit> commits, List<Issue> issues, List<String> conocimientos) {
         this.id = id;
-        this.nombre = nombre;
-        this.fecha_alta = fecha_alta;
         this.idDpt = idDpt;
+        this.idEquipo = idEquipo;
         this.idComite = idComite;
+        this.nombre = nombre;
+        this.experto = experto;
+        this.alta = alta;
+        this.salario = salario;
+        this.password = password;
         this.proyectos = proyectos;
         this.commits = commits;
         this.issues = issues;
         this.conocimientos = conocimientos;
-        this.salario = salario;
+    }
+
+    public Programador(long id, long idDpt, List<Proyecto> proyectos, List<Issue> issues) {
     }
 
     public long getId() {
@@ -40,22 +48,6 @@ public class Programador {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Date getFecha_alta() {
-        return fecha_alta;
-    }
-
-    public void setFecha_alta(Date fecha_alta) {
-        this.fecha_alta = fecha_alta;
-    }
-
     public long getIdDpt() {
         return idDpt;
     }
@@ -64,12 +56,60 @@ public class Programador {
         this.idDpt = idDpt;
     }
 
+    public long getIdEquipo() {
+        return idEquipo;
+    }
+
+    public void setIdEquipo(long idEquipo) {
+        this.idEquipo = idEquipo;
+    }
+
     public long getIdComite() {
         return idComite;
     }
 
     public void setIdComite(long idComite) {
         this.idComite = idComite;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getExperto() {
+        return experto;
+    }
+
+    public void setExperto(String experto) {
+        this.experto = experto;
+    }
+
+    public Date getAlta() {
+        return alta;
+    }
+
+    public void setAlta(Date alta) {
+        this.alta = alta;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public List<Proyecto> getProyectos() {
@@ -102,13 +142,5 @@ public class Programador {
 
     public void setConocimientos(List<String> conocimientos) {
         this.conocimientos = conocimientos;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
     }
 }

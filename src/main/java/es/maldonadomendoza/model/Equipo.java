@@ -1,7 +1,6 @@
 package es.maldonadomendoza.model;
 
 
-
 import java.util.List;
 
 public class Equipo {
@@ -34,6 +33,7 @@ public class Equipo {
     public List<Proyecto> getProyectos() {
         return proyectos;
     }
+
     public void setProyectos(List<Proyecto> proyectos) {
         this.proyectos = proyectos;
     }
