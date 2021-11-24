@@ -18,6 +18,8 @@ public class DataBaseController {
     private Connection connection;
     @NonNull
     private PreparedStatement preparedStatement;
+    @NonNull
+    private String DATABASE = System.getProperty("user.dir") + File.separator + "db" + File.separator + "adsl.sqlite";
 
     /**
      * Devuelve una instancia del controlador
@@ -37,8 +39,7 @@ public class DataBaseController {
      * @throws SQLException Servidor no accesible por problemas de conexión o datos de acceso incorrectos
      */
     public void open() throws SQLException {
-        String url = "jdbc:sqlite:" + System.getProperty("user.dir") + File.separator + "resources" + File.separator +
-                "adsl.db";
+        String url = "jdbc:sqlite:" + DATABASE;
         // Obtenemos la conexión
         connection = DriverManager.getConnection(url);
     }
@@ -157,5 +158,12 @@ public class DataBaseController {
             preparedStatement.setObject(i + 1, params[i]);
         }
         return preparedStatement.executeUpdate();
+    }
+
+    public void initData(@NonNull String sqlFile) throws FileNotFoundException {
+        ScriptRunner sr = new ScriptRunner(connection);
+        sr.setEscapeProcessing(false); // Para SQLite
+        Reader reader = new BufferedReader(new FileReader(sqlFile));
+        sr.runScript(reader);
     }
 }

@@ -11,7 +11,8 @@ import java.util.Optional;
 public class AccessData {
     private static AccessData instance;
 
-    private AccessData() {}
+    private AccessData() {
+    }
 
     public static AccessData getInstance() {
         if (instance == null) {
@@ -19,6 +20,7 @@ public class AccessData {
         }
         return instance;
     }
+
     public void checkService() {
         DataBaseController controller = DataBaseController.getInstance();
         try {
@@ -27,9 +29,28 @@ public class AccessData {
             if (rs.isPresent()) {
                 rs.get().next();
                 controller.close();
+                System.out.println("Conexión correcta");
             }
         } catch (SQLException e) {
             System.err.println("Error al conectar al servidor de Base de Datos: " + e.getMessage());
+            System.exit(1);
+        }
+    }
+
+    public void initData() {
+        System.out.println("Iniciamos los datos");
+        DataBaseController controller = DataBaseController.getInstance();
+        String sqlFile = System.getProperty("user.dir") + File.separator + "sql" + File.separator + "adsl.sql";
+        System.out.println(sqlFile);
+        try {
+            controller.open();
+            controller.initData(sqlFile);
+            controller.close();
+        } catch (SQLException e) {
+            System.err.println("Error al conectar al servidor de Base de Datos: " + e.getMessage());
+            System.exit(1);
+        } catch (FileNotFoundException e) {
+            System.err.println("Error al leer el fichero de datos iniciales: " + e.getMessage());
             System.exit(1);
         }
     }
