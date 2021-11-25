@@ -14,9 +14,9 @@ public class Issue {
     private Repositorio repositorio;
     private Comite programadores;
     private Repositorio proyecto;
-    private List<Commit> commits;
+    private List<String> commits;
 
-    public Issue(long id, long idJefe, String titulo, String texto, Date fecha, boolean estado, Repositorio repositorio, Comite programadores, Repositorio proyecto, List<Commit> commits) {
+    public Issue(long id, long idJefe, String titulo, String texto, Date fecha, boolean estado, Repositorio repositorio, Comite programadores, Repositorio proyecto, List<String> commits) {
         this.id = id;
         this.idJefe = idJefe;
         this.titulo = titulo;
@@ -101,11 +101,11 @@ public class Issue {
         this.proyecto = proyecto;
     }
 
-    public List<Commit> getCommits() {
+    public List<String> getCommits() {
         return commits;
     }
 
-    public void setCommits(List<Commit> commits) {
+    public void setCommits(List<String> commits) {
         this.commits = commits;
     }
 }

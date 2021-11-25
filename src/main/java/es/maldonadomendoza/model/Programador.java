@@ -15,13 +15,12 @@ public class Programador {
     private Date alta;
     private double salario;
     private String password;
-    private List<Proyecto> proyectos;
-    private List<Commit> commits;
-    private List<Issue> issues;
+    private List<String> proyectos;
+    private List<String> commits;
+    private List<String> issues;
     private List<String> conocimientos;
 
-
-    public Programador(long id, long idDpt, long idEquipo, long idComite, String nombre, String experto, Date alta, double salario, String password, List<Proyecto> proyectos, List<Commit> commits, List<Issue> issues, List<String> conocimientos) {
+    public Programador(long id, long idDpt, long idEquipo, long idComite, String nombre, String experto, Date alta, double salario, String password, List<String> proyectos, List<String> commits, List<String> issues, List<String> conocimientos) {
         this.id = id;
         this.idDpt = idDpt;
         this.idEquipo = idEquipo;
@@ -37,8 +36,9 @@ public class Programador {
         this.conocimientos = conocimientos;
     }
 
-    public Programador(long id, long idDpt, List<Proyecto> proyectos, List<Issue> issues) {
+    public Programador(long id, long idDpt, List<String> proyectos, List<String> issues) {
     }
+
 
     public long getId() {
         return id;
@@ -112,27 +112,27 @@ public class Programador {
         this.password = password;
     }
 
-    public List<Proyecto> getProyectos() {
+    public List<String> getProyectos() {
         return proyectos;
     }
 
-    public void setProyectos(List<Proyecto> proyectos) {
+    public void setProyectos(List<String> proyectos) {
         this.proyectos = proyectos;
     }
 
-    public List<Commit> getCommits() {
+    public List<String> getCommits() {
         return commits;
     }
 
-    public void setCommits(List<Commit> commits) {
+    public void setCommits(List<String> commits) {
         this.commits = commits;
     }
 
-    public List<Issue> getIssues() {
+    public List<String> getIssues() {
         return issues;
     }
 
-    public void setIssues(List<Issue> issues) {
+    public void setIssues(List<String> issues) {
         this.issues = issues;
     }
 

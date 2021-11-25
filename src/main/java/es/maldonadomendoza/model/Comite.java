@@ -6,10 +6,10 @@ import java.util.List;
 
 public class Comite {
     private long id;
-    private List<Programador> programadores;
+    private List<String> programadores;
     private Issue issues;
 
-    public Comite(long id, List<Programador> programadores, Issue issues) {
+    public Comite(long id, List<String> programadores, Issue issues) {
         this.id = id;
         this.programadores = programadores;
         this.issues = issues;
@@ -23,11 +23,11 @@ public class Comite {
         this.id = id;
     }
 
-    public List<Programador> getProgramadores() {
+    public List<String> getProgramadores() {
         return programadores;
     }
 
-    public void setProgramadores(List<Programador> programadores) {
+    public void setProgramadores(List<String> programadores) {
         this.programadores = programadores;
     }
 
