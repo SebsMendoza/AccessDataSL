@@ -13,10 +13,10 @@ public class Proyecto {
     private Date fechaInicio;
     private Date fechaFin;
     private List<String> tecnologias;
-    private List<Equipo> equipos;
-    private List<Repositorio> repositorios;
+    private List<String> equipos;
+    private List<String> repositorios;
 
-    public Proyecto(long id, long idJefe, long idDpt, String nombre, double presupuesto, Date fechaInicio, Date fechaFin, List<String> tecnologias, List<Equipo> equipos, List<Repositorio> repositorios) {
+    public Proyecto(long id, long idJefe, long idDpt, String nombre, double presupuesto, Date fechaInicio, Date fechaFin, List<String> tecnologias, List<String> equipos, List<String> repositorios) {
         this.id = id;
         this.idJefe = idJefe;
         this.idDpt = idDpt;
@@ -93,19 +93,19 @@ public class Proyecto {
         this.tecnologias = tecnologias;
     }
 
-    public List<Equipo> getEquipos() {
+    public List<String> getEquipos() {
         return equipos;
     }
 
-    public void setEquipos(List<Equipo> equipos) {
+    public void setEquipos(List<String> equipos) {
         this.equipos = equipos;
     }
 
-    public List<Repositorio> getRepositorios() {
+    public List<String> getRepositorios() {
         return repositorios;
     }
 
-    public void setRepositorios(List<Repositorio> repositorios) {
+    public void setRepositorios(List<String> repositorios) {
         this.repositorios = repositorios;
     }
 }

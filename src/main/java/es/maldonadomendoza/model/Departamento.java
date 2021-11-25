@@ -4,17 +4,17 @@ package es.maldonadomendoza.model;
 import java.util.List;
 
 
-public class DptDesarrollo {
+public class Departamento {
     private long id;
     private long idJefeDpt;
     private String nombre;
-    double presupuesto;
-    private List<Proyecto> finalizado;
-    private List<Proyecto> activo;
-    private List<Programador> historico;
-    private List<Programador> programadores;
+    private double presupuesto;
+    private List<String> finalizado;
+    private List<String> activo;
+    private List<String> historico;
+    private List<String> programadores;
 
-    public DptDesarrollo(long id, long idJefeDpt, String nombre, double presupuesto, List<Proyecto> finalizado, List<Proyecto> activo, List<Programador> historico, List<Programador> programadores) {
+    public Departamento(long id, long idJefeDpt, String nombre, double presupuesto, List<String> finalizado, List<String> activo, List<String> historico, List<String> programadores) {
         this.id = id;
         this.idJefeDpt = idJefeDpt;
         this.nombre = nombre;
@@ -57,35 +57,35 @@ public class DptDesarrollo {
         this.presupuesto = presupuesto;
     }
 
-    public List<Proyecto> getFinalizado() {
+    public List<String> getFinalizado() {
         return finalizado;
     }
 
-    public void setFinalizado(List<Proyecto> finalizado) {
+    public void setFinalizado(List<String> finalizado) {
         this.finalizado = finalizado;
     }
 
-    public List<Proyecto> getActivo() {
+    public List<String> getActivo() {
         return activo;
     }
 
-    public void setActivo(List<Proyecto> activo) {
+    public void setActivo(List<String> activo) {
         this.activo = activo;
     }
 
-    public List<Programador> getHistorico() {
+    public List<String> getHistorico() {
         return historico;
     }
 
-    public void setHistorico(List<Programador> historico) {
+    public void setHistorico(List<String> historico) {
         this.historico = historico;
     }
 
-    public List<Programador> getProgramadores() {
+    public List<String> getProgramadores() {
         return programadores;
     }
 
-    public void setProgramadores(List<Programador> programadores) {
+    public void setProgramadores(List<String> programadores) {
         this.programadores = programadores;
     }
 }

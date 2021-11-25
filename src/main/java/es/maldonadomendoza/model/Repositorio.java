@@ -9,10 +9,10 @@ public class Repositorio {
     private String nombre;
     private Date creacion;
     private Proyecto proyecto;
-    private List<Commit> commits;
-    private List<Issue> issues;
+    private List<String> commits;
+    private List<String> issues;
 
-    public Repositorio(long id, String nombre, Date creacion, Proyecto proyecto, List<Commit> commits, List<Issue> issues) {
+    public Repositorio(long id, String nombre, Date creacion, Proyecto proyecto, List<String> commits, List<String> issues) {
         this.id = id;
         this.nombre = nombre;
         this.creacion = creacion;
@@ -53,19 +53,19 @@ public class Repositorio {
         this.proyecto = proyecto;
     }
 
-    public List<Commit> getCommits() {
+    public List<String> getCommits() {
         return commits;
     }
 
-    public void setCommits(List<Commit> commits) {
+    public void setCommits(List<String> commits) {
         this.commits = commits;
     }
 
-    public List<Issue> getIssues() {
+    public List<String> getIssues() {
         return issues;
     }
 
-    public void setIssues(List<Issue> issues) {
+    public void setIssues(List<String> issues) {
         this.issues = issues;
     }
 }
