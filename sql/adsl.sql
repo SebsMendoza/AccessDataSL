@@ -159,7 +159,7 @@ VALUES (4, 27, 'Data', 105000.0);
 DROP TABLE IF EXISTS equipo;
 CREATE TABLE equipo
 (
-    id         INT PRIMARY KEY,
+    id          INT PRIMARY KEY,
     id_prog     TEXT,
     id_proyecto TEXT
 );
@@ -342,13 +342,14 @@ CREATE TABLE programador
     id_comite    TEXT,
     id_issue     TEXT,
     nombre       STRING,
+    password     STRING,
     conocimiento STRING,
     fecha_alta   DATE,
     salario      DOUBLE
 );
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, pasword, conocimiento, fecha_alta,
                          salario)
-VALUES (2, 1, 2, '3 4', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Luis', 'kotlin', '2021-1-2', 1500.0);
+VALUES (2, 1, 2, '3 4', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Luis', '', 'kotlin', '2021-1-2', 1500.0);
 INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
                          salario)
 VALUES (1, 1, 1, '1 2', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Juan', 'java', '2021-1-1', 1500.0);
@@ -432,16 +433,16 @@ VALUES (27, NULL, 4, NULL, NULL, NULL, 'Raul', 'pascal', '2020-1-4', 3000.0);
 DROP TABLE IF EXISTS proyecto;
 CREATE TABLE proyecto
 (
-    id            INT PRIMARY KEY,
-    id_jefe       INT,
-    id_equipo     INT,
-    id_dpt        INT,
-    id_repo INT,
-    nombre        STRING,
-    presupuesto   DOUBLE,
-    fecha_ini     DATE,
-    fecha_fin     DATE,
-    tecnologias   STRING
+    id          INT PRIMARY KEY,
+    id_jefe     INT,
+    id_equipo   INT,
+    id_dpt      INT,
+    id_repo     INT,
+    nombre      STRING,
+    presupuesto DOUBLE,
+    fecha_ini   DATE,
+    fecha_fin   DATE,
+    tecnologias STRING
 );
 INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
