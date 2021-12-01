@@ -24,4 +24,8 @@ public class Programador {
     private List<String> commits;
     private List<String> issues;
     private List<String> conocimientos;
+
+    public Programador(int id, int id_equipo, int id_dpt, List<String> id_commit, List<String> id_comite,
+                       List<String> id_issue, String nombre, String experto, Date fecha_alta, double salario) {
+    }
 }
