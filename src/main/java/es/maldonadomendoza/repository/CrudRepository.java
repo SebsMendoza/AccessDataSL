@@ -1,4 +1,4 @@
-package repository;
+package es.maldonadomendoza.repository;
 
 import java.sql.SQLException;
 import java.util.List;

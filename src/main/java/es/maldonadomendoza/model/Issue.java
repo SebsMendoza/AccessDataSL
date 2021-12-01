@@ -21,4 +21,6 @@ public class Issue {
     private boolean estado;
     private Repositorio proyecto;
 
+    public Issue(int id, int id_jefe, int id_commit, int id_repo, int id_comite, String titulo, List<String> texto, Date fecha, boolean estado) {
+    }
 }
