@@ -1,19 +1,17 @@
 package es.maldonadomendoza.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.Date;
 import java.util.List;
 
-
-public class Jefe extends Programador {
+@Data
+@AllArgsConstructor
+public class Jefe {
     private long idJefe;
+    private long idProg;
     private long idProyecto;
-
-    public Jefe(long id, long idDpt, List<String> proyectos, List<String> issues, long idJefe, long idProyecto) {
-        super(id, idDpt, proyectos, issues);
-        this.idJefe = idJefe;
-        this.idProyecto = idProyecto;
-    }
-
 }
 
 

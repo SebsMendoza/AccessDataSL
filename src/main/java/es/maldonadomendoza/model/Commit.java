@@ -1,8 +1,13 @@
 package es.maldonadomendoza.model;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
+@AllArgsConstructor
 public class Commit {
     private long id;
     private long idProg;
@@ -12,79 +17,4 @@ public class Commit {
     private Date fecha;
     private Repositorio repositorio;
     private Issue Issues;
-
-    public Commit(long id, long idProg, long idProyecto, String titulo, String texto, Date fecha, Repositorio repositorio, Issue issues) {
-        this.id = id;
-        this.idProg = idProg;
-        this.idProyecto = idProyecto;
-        this.titulo = titulo;
-        this.texto = texto;
-        this.fecha = fecha;
-        this.repositorio = repositorio;
-        Issues = issues;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public long getIdProg() {
-        return idProg;
-    }
-
-    public void setIdProg(long idProg) {
-        this.idProg = idProg;
-    }
-
-    public long getIdProyecto() {
-        return idProyecto;
-    }
-
-    public void setIdProyecto(long idProyecto) {
-        this.idProyecto = idProyecto;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getTexto() {
-        return texto;
-    }
-
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
-    public Repositorio getRepositorio() {
-        return repositorio;
-    }
-
-    public void setRepositorio(Repositorio repositorio) {
-        this.repositorio = repositorio;
-    }
-
-    public Issue getIssues() {
-        return Issues;
-    }
-
-    public void setIssues(Issue issues) {
-        Issues = issues;
-    }
 }

@@ -160,18 +160,18 @@ DROP TABLE IF EXISTS equipo;
 CREATE TABLE equipo
 (
     id         INT PRIMARY KEY,
-    idProg     TEXT,
-    idProyecto TEXT
+    id_prog     TEXT,
+    id_proyecto TEXT
 );
-INSERT INTO equipo (id, idProg, idProyecto)
+INSERT INTO equipo (id, id_prog, id_proyecto)
 VALUES (1, '1 2 3', '1 6');
-INSERT INTO equipo (id, idProg, idProyecto)
+INSERT INTO equipo (id, id_prog, id_proyecto)
 VALUES (5, '13 14 15', '5');
-INSERT INTO equipo (id, idProg, idProyecto)
+INSERT INTO equipo (id, id_prog, id_proyecto)
 VALUES (2, '4 5 6', '2 7');
-INSERT INTO equipo (id, idProg, idProyecto)
+INSERT INTO equipo (id, id_prog, id_proyecto)
 VALUES (3, '7 8 9', '3 8');
-INSERT INTO equipo (id, idProg, idProyecto)
+INSERT INTO equipo (id, id_prog, id_proyecto)
 VALUES (4, '10 11 12', '4');
 
 -- Table: issue
@@ -189,119 +189,119 @@ CREATE TABLE issue
     estado    BOOLEAN
 );
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (1, 16, 1, 1, 1, 'Resolver POJOS',
+VALUES (1, 1, 1, 1, 1, 'Resolver POJOS',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse massa justo, sodales ac nibh vel.',
         '2021-1-2', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (2, 16, 2, 1, 2, 'Arreglar Database',
+VALUES (2, 1, 2, 1, 2, 'Arreglar Database',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris efficitur sollicitudin tellus dictum suscipit. Integer.',
         '2021-4-3', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (3, 16, 3, 1, 3, 'Corregir POM',
+VALUES (3, 1, 3, 1, 3, 'Corregir POM',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id risus bibendum, lacinia mauris non.',
         '2021-5-4', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (4, 16, 4, 1, 4, 'Crear Clase',
+VALUES (4, 1, 4, 1, 4, 'Crear Clase',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero dui, auctor vitae suscipit placerat.',
         '2021-6-5', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (5, 17, 1, 2, 5, 'Crear Archivo', '
+VALUES (5, 2, 1, 2, 5, 'Crear Archivo', '
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum lectus ac urna mattis mattis.', '2021-3-22',
         'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (6, 17, 2, 2, 6, 'Crear Tabla',
+VALUES (6, 2, 2, 2, 6, 'Crear Tabla',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at nunc et turpis mattis vestibulum.',
         '2021-3-24', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (7, 17, 3, 2, 7, 'Crear Grafico', '
+VALUES (7, 2, 3, 2, 7, 'Crear Grafico', '
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lobortis orci. Proin faucibus quam.', '2021-3-26',
         'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (8, 17, 4, 2, 8, 'Arreglar Main',
+VALUES (8, 2, 4, 2, 8, 'Arreglar Main',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor felis venenatis mattis sollicitudin. Vestibulum.',
         '2021-3-28', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (9, 17, 5, 2, 9, 'Arreglar Archivo',
+VALUES (9, 2, 5, 2, 9, 'Arreglar Archivo',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a nisl eget est fringilla mollis.', '2021-3-29',
         'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (12, 18, 1, 3, 12, 'Modificar Clase',
+VALUES (12, 3, 1, 3, 12, 'Modificar Clase',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac purus sit amet dui pulvinar.', '2021-4-5',
         'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (10, 18, 2, 3, 10, 'Arreglar POJOS',
+VALUES (10, 3, 2, 3, 10, 'Arreglar POJOS',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in justo mollis, vehicula mi placerat.',
         '2021-5-6', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (11, 18, 3, 3, 11, 'Crear Clase',
+VALUES (11, 3, 3, 3, 11, 'Crear Clase',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis scelerisque neque id pretium. Donec.',
         '2021-6-8', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (13, 19, 1, 4, 13, 'Crear Database',
+VALUES (13, 4, 1, 4, 13, 'Crear Database',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam vehicula est, ut faucibus erat.',
         '2021-5-16', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (14, 19, 2, 4, 14, 'Arreglar Numeros',
+VALUES (14, 4, 2, 4, 14, 'Arreglar Numeros',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque enim eros, a tempor arcu.',
         '2021-6-15', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (15, 19, 3, 4, 15, 'Cambiar Datos',
+VALUES (15, 4, 3, 4, 15, 'Cambiar Datos',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor arcu id dui convallis, ac.',
         '2021-7-15', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (16, 20, 1, 5, 16, 'Crear metodos',
+VALUES (16, 5, 1, 5, 16, 'Crear metodos',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et ipsum tellus. Donec id lacus.',
         '2021-10-8', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (17, 20, 2, 5, 17, 'Modificar Condicionales',
+VALUES (17, 5, 2, 5, 17, 'Modificar Condicionales',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec turpis vehicula, dignissim lectus ac.',
         '2021-11-9', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (18, 20, 3, 5, 18, 'Crear Tabla',
+VALUES (18, 5, 3, 5, 18, 'Crear Tabla',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus, mi in lobortis laoreet, odio.',
         '2021-12-5', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (19, 21, 1, 6, 19, 'Modificar POM', '
+VALUES (19, 6, 1, 6, 19, 'Modificar POM', '
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse enim diam, luctus at neque eu.', '2021-9-1',
         'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (20, 21, 2, 6, 20, 'Modificacion Tablas',
+VALUES (20, 6, 2, 6, 20, 'Modificacion Tablas',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat ut metus ac dapibus. Donec.',
         '2021-10-1', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (21, 21, 3, 6, 21, 'Crear Clase',
+VALUES (21, 6, 3, 6, 21, 'Crear Clase',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt ante et porttitor laoreet. Integer.',
         '2021-11-1', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (22, 21, 4, 6, 22, 'Crear Condicionales',
+VALUES (22, 6, 4, 6, 22, 'Crear Condicionales',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus vitae est ac laoreet. In.',
         '2021-12-1', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (23, 22, 1, 7, 23, 'Corregir POM', '
+VALUES (23, 7, 1, 7, 23, 'Corregir POM', '
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan elit eros, a molestie arcu.', '2021-10-10',
         'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (24, 22, 2, 7, 24, 'Crear Clase',
+VALUES (24, 7, 2, 7, 24, 'Crear Clase',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris sem, aliquam mollis massa id.',
         '2021-11-10', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (25, 22, 3, 7, 25, 'Arreglar POJOS',
+VALUES (25, 7, 3, 7, 25, 'Arreglar POJOS',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dignissim metus, pellentesque pellentesque.',
         '2021-12-15', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (26, 22, 4, 7, 26, 'Crear Archivo',
+VALUES (26, 7, 4, 7, 26, 'Crear Archivo',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lectus libero. Fusce quis tincidunt.',
         '2022-1-1', 'true');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (27, 23, 1, 8, 27, 'Crear Grafico',
+VALUES (27, 8, 1, 8, 27, 'Crear Grafico',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus, nulla a interdum mollis, elit.',
         '2022-2-1', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (28, 23, 2, 8, 28, 'Crear Grafico',
+VALUES (28, 8, 2, 8, 28, 'Crear Grafico',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut nibh vulputate, tempus turpis at.',
         '2022-3-15', 'false');
 INSERT INTO issue (id, id_jefe, id_commit, id_repo, id_comite, titulo, texto, fecha, estado)
-VALUES (29, 23, 3, 8, 29, 'Arreglar POJOS',
+VALUES (29, 8, 3, 8, 29, 'Arreglar POJOS',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis leo leo. Phasellus augue purus.',
         '2022-4-16', 'true');
 
@@ -311,24 +311,25 @@ CREATE TABLE jefe
 (
     id          INT PRIMARY KEY,
     id_proyecto INT,
+    id_prog,
     id_issue    TEXT
 );
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (16, 1, '1 2 3 4');
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (17, 2, '5 6 7 8 9');
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (18, 3, '10 11 12');
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (19, 4, '13 14 15');
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (20, 5, '16 17 18');
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (21, 6, '19 20 21 22');
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (22, 7, '23 24 25 26');
-INSERT INTO jefe (id, id_proyecto, id_issue)
-VALUES (23, 8, '27 28 29');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (1, 1, 16, '1 2 3 4');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (2, 2, 17, '5 6 7 8 9');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (3, 3, 18, '10 11 12');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (4, 4, 19, '13 14 15');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (5, 5, 20, '16 17 18');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (6, 6, 21, '19 20 21 22');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (7, 7, 22, '23 24 25 26');
+INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
+VALUES (8, 8, 23, '27 28 29');
 
 -- Table: programador
 DROP TABLE IF EXISTS programador;
@@ -435,35 +436,35 @@ CREATE TABLE proyecto
     id_jefe       INT,
     id_equipo     INT,
     id_dpt        INT,
-    idRepositorio INT,
+    id_repo INT,
     nombre        STRING,
     presupuesto   DOUBLE,
     fecha_ini     DATE,
     fecha_fin     DATE,
     tecnologias   STRING
 );
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (8, 23, 3, 4, 8, 'Deilop', 75000.0, '2022-1-20', '2022-6-18', 'Laravel');
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (1, 16, 1, 1, 1, 'Casus', 50000.0, '2021-1-1', '2021-6-20', 'Spring');
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (2, 17, 2, 2, 2, 'Pagasus', 10000.0, '2021-3-20', '2021-4-20', 'Laravel');
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (3, 18, 3, 3, 3, 'Filtrex', 70000.0, '2021-4-3', '2021-11-20', 'Django');
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (4, 19, 4, 4, 4, 'Viguo', 30000.0, '2021-5-15', '2021-8-11', 'Angular');
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (5, 20, 5, 1, 5, 'Arteros', 90000.0, '2021-7-8', '2022-2-26', 'Ruby');
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (6, 21, 1, 2, 6, 'Brugio', 85000.0, '2021-8-1', '2022-3-9', 'Express');
-INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, idRepositorio, nombre, presupuesto, fecha_ini, fecha_fin,
+INSERT INTO proyecto (id, id_jefe, id_equipo, id_dpt, id_repo, nombre, presupuesto, fecha_ini, fecha_fin,
                       tecnologias)
 VALUES (7, 22, 2, 3, 7, 'Vix', 15000.0, '2021-9-10', '2022-4-23', 'Spring');
 
