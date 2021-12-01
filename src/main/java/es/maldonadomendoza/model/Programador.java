@@ -23,5 +23,8 @@ public class Programador {
     private Date fecha_alta;
     private double salario;
     private List<String> proyectos;
-    private List<String> expertos;
+
+    public Programador(int id, int id_equipo, int id_dpt, List<String> id_commit, List<String> id_comite,
+                       List<String> id_issue, String nombre, String experto, Date fecha_alta, double salario) {
+    }
 }
