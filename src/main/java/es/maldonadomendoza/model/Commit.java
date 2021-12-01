@@ -11,10 +11,11 @@ import java.util.Date;
 public class Commit {
     private long id;
     private long idProg;
+    private Repositorio repositorio;
     private long idProyecto;
+    private Issue Issues;
     private String titulo;
     private String texto;
     private Date fecha;
-    private Repositorio repositorio;
-    private Issue Issues;
+
 }

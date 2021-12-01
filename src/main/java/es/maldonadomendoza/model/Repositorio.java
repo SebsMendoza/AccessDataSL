@@ -11,9 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 public class Repositorio {
     private long id;
-    private String nombre;
-    private Date creacion;
     private Proyecto proyecto;
     private List<String> commits;
     private List<String> issues;
+    private String nombre;
+    private Date creacion;
+
+
+
 }

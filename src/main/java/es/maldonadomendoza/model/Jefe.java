@@ -10,8 +10,9 @@ import java.util.List;
 @AllArgsConstructor
 public class Jefe {
     private long idJefe;
-    private long idProg;
     private long idProyecto;
+    private long idProg;
+
 }
 
 
