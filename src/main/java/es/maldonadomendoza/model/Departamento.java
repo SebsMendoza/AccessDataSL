@@ -16,4 +16,8 @@ public class Departamento {
     private List<String> finalizado;
     private List<String> activo;
     private List<String> historico;
+
+    public Departamento(int id, int id_jefe, String nombre, double presupuesto) {
+
+    }
 }
