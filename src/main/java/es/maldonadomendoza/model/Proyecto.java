@@ -12,12 +12,13 @@ import java.util.List;
 public class Proyecto {
     private long id;
     private long idJefe;
+    private List<String> equipos;
     private long idDpt;
+    private List<String> repositorios;
     private String nombre;
     private double presupuesto;
     private Date fechaInicio;
     private Date fechaFin;
     private List<String> tecnologias;
-    private List<String> equipos;
-    private List<String> repositorios;
+
 }

@@ -343,91 +343,91 @@ CREATE TABLE programador
     id_issue     TEXT,
     nombre       STRING,
     password     STRING,
-    conocimiento STRING,
+    experto      STRING,
     fecha_alta   DATE,
     salario      DOUBLE
 );
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, pasword, conocimiento, fecha_alta,
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (2, 1, 2, '3 4', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Luis', '', 'kotlin', '2021-1-2', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (2, 1, 2, '3 4', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Luis', '1234', 'kotlin', '2021-1-2', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (1, 1, 1, '1 2', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Juan', 'java', '2021-1-1', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (1, 1, 1, '1 2', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Juan', '5678', 'java', '2021-1-1', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (3, 1, 3, '5 6', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Alfondo', 'sql', '2021-1-3', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (3, 1, 3, '5 6', '1 2 3 4 19 20 21 22', '1 2 3 4 19 20 21 22', 'Alfondo', '90ab', 'sql', '2021-1-3', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (4, 2, 4, '7', '5 6 7 8 9 23 24 25 26', '5 6 7 8 9 23 24 25 26', 'Mario', 'java', '2021-2-1', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (4, 2, 4, '7', '5 6 7 8 9 23 24 25 26', '5 6 7 8 9 23 24 25 26', 'Mario', 'cdef', 'java', '2021-2-1', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (5, 2, 1, '8', '5 6 7 8 9 23 24 25 26', '5 6 7 8 9 23 24 25 26', 'Jaime', 'css', '2021-2-2', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (5, 2, 1, '8', '5 6 7 8 9 23 24 25 26', '5 6 7 8 9 23 24 25 26', 'Jaime', 'ghij', 'css', '2021-2-2', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (6, 2, 2, '9 10 11', '5 6 7 8 9 23 24 25 26', '5 6 7 8 9 23 24 25 26', 'Alejandro', 'c', '2021-2-3', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (6, 2, 2, '9 10 11', '5 6 7 8 9 23 24 25 26', '5 6 7 8 9 23 24 25 26', 'Alejandro', 'klmn', 'c', '2021-2-3', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (7, 3, 3, '12 13', '10 11 12 27 28 29', '10 11 12 27 28 29', 'Jaime', 'php', '2021-1-2', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (7, 3, 3, '12 13', '10 11 12 27 28 29', '10 11 12 27 28 29', 'Jaime', 'opqr', 'php', '2021-1-2', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (9, 3, 1, NULL, '10 11 12 27 28 29', '10 11 12 27 28 29', 'Alfredo', 'go', '2021-5-1', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (9, 3, 1, NULL, '10 11 12 27 28 29', '10 11 12 27 28 29', 'Alfredo', 'go', 'stuv', '2021-5-1', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (8, 3, 4, '14 15', '10 11 12 27 28 29', '10 11 12 27 28 29', 'Sebas', 'ruby', '2021-3-1', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (8, 3, 4, '14 15', '10 11 12 27 28 29', '10 11 12 27 28 29', 'Sebas', 'xyz1', 'ruby', '2021-3-1', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (10, 4, 2, NULL, '13 14 15', '13 14 15', 'Emilio', 'python', '2021-6-3', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (10, 4, 2, NULL, '13 14 15', '13 14 15', 'Emilio', 'python', '2345', '2021-6-3', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (11, 4, 3, NULL, '13 14 15', '13 14 15', 'Saul', 'sql', '2021-6-2', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (11, 4, 3, NULL, '13 14 15', '13 14 15', 'Saul', '6789', 'sql', '2021-6-2', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (12, 4, 4, NULL, '13 14 15', '13 14 15', 'Sergio', 'javascript', '2021-6-1', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (12, 4, 4, NULL, '13 14 15', '13 14 15', 'Sergio', '0abc', 'javascript', '2021-6-1', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (14, 5, 2, NULL, '16 17 18', '16 17 18', 'Federico', 'c', '2021-9-2', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (14, 5, 2, NULL, '16 17 18', '16 17 18', 'Federico', 'defg', 'c', '2021-9-2', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (15, 5, 3, NULL, '16 17 18', '16 17 18', 'Andrea', 'ruby', '2021-9-3', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (15, 5, 3, NULL, '16 17 18', '16 17 18', 'Andrea', 'hijk', 'ruby', '2021-9-3', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (13, 5, 1, NULL, '16 17 18', '16 17 18', 'Antonio', 'css', '2021-9-1', 1500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (13, 5, 1, NULL, '16 17 18', '16 17 18', 'Antonio', 'lmno', 'css', '2021-9-1', 1500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (16, NULL, 4, NULL, NULL, '1 2 3 4', 'Richard', 'kotlin', '2020-1-1', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (16, NULL, 4, NULL, NULL, '1 2 3 4', 'Richard', 'pqrs', 'kotlin', '2020-1-1', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (17, NULL, 1, NULL, NULL, '5 6 7 8 9', 'Cristiano', 'java', '2020-1-2', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (17, NULL, 1, NULL, NULL, '5 6 7 8 9', 'Cristiano', 'tuvx', 'java', '2020-1-2', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (18, NULL, 2, NULL, NULL, '10 11 12', 'Ismael', 'sql', '2020-1-3', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (18, NULL, 2, NULL, NULL, '10 11 12', 'Ismael', 'yz12', 'sql', '2020-1-3', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (19, NULL, 3, NULL, NULL, '13 14 15', 'Rafael', 'css', '2020-1-4', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (19, NULL, 3, NULL, NULL, '13 14 15', 'Rafael', '3456', 'css', '2020-1-4', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (20, NULL, 4, NULL, NULL, '16 17 18', 'Antonio', 'c', '2020-1-5', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (20, NULL, 4, NULL, NULL, '16 17 18', 'Antonio', '7890', 'c', '2020-1-5', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (21, NULL, 1, NULL, NULL, '19 20 21 22', 'Gabriela', 'php', '2020-1-6', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (21, NULL, 1, NULL, NULL, '19 20 21 22', 'Gabriela', 'abcd', 'php', '2020-1-6', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (22, NULL, 2, NULL, NULL, '23 24 25 26', 'Susana', 'phyton', '2020-1-7', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (22, NULL, 2, NULL, NULL, '23 24 25 26', 'Susana', 'efgh', 'phyton', '2020-1-7', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (23, NULL, 3, NULL, NULL, '27 28 29', 'Monica', 'ruby', '2020-1-8', 2500.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (23, NULL, 3, NULL, NULL, '27 28 29', 'Monica', 'ijkl', 'ruby', '2020-1-8', 2500.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (24, NULL, 1, NULL, NULL, NULL, 'Laura', 'kotlin', '2020-1-1', 3000.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (24, NULL, 1, NULL, NULL, NULL, 'Laura', 'kotlin', 'mnop', '2020-1-1', 3000.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (25, NULL, 2, NULL, NULL, NULL, 'Jessica', 'css', '2020-1-2', 3000.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (25, NULL, 2, NULL, NULL, NULL, 'Jessica', 'qrst', 'css', '2020-1-2', 3000.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (26, NULL, 3, NULL, NULL, NULL, 'Maria', 'ruby', '2020-1-3', 3000.0);
-INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, conocimiento, fecha_alta,
+VALUES (26, NULL, 3, NULL, NULL, NULL, 'Maria', 'uvxy', 'ruby', '2020-1-3', 3000.0);
+INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)
-VALUES (27, NULL, 4, NULL, NULL, NULL, 'Raul', 'pascal', '2020-1-4', 3000.0);
+VALUES (27, NULL, 4, NULL, NULL, NULL, 'Raul', 'z0123', 'pascal', '2020-1-4', 3000.0);
 
 -- Table: proyecto
 DROP TABLE IF EXISTS proyecto;
