@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DepartamentoRepository implements CrudRepository<Departamento, Integer> {
-    CheckNulls cn = new CheckNulls();
     @Override
     public List<Departamento> findAll() throws SQLException {
         String query = "SELECT * FROM departamento";
