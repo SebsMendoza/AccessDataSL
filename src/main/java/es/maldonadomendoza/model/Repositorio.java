@@ -18,5 +18,7 @@ public class Repositorio {
     private Date creacion;
 
 
+    public Repositorio(int id, int id_proyecto, int id_commit, int id_isuue, String nombre, java.sql.Date fechaCreacion) {
 
+    }
 }

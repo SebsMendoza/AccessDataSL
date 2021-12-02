@@ -66,7 +66,7 @@ public class ProgRepository implements CrudRepository<Programador, Integer> {
 
     @Override
     public Programador save(Programador programador) throws SQLException {
-        String query = "INSERT INTO programador VALUES (?, ?, ?, ?, ?, ?, ?, ? ,?, ?)";
+        String query = "INSERT INTO programador VALUES (?, ?, ?, ?, ?, ?, ?, ? , ?, ?)";
         DataBaseController db = DataBaseController.getInstance();
         db.open();
         ResultSet result = db.insert(query, programador.getId(), programador.getIdEquipo(), programador.getIdDpt(), programador.getCommits(), programador.getIdComite(), programador.getIssues(), programador.getNombre(), programador.getExperto(), programador.getFecha_alta(), programador.getSalario()).orElseThrow(() -> new SQLException("Error ProgRepository al insertar Programador"));
