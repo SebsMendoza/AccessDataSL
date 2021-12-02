@@ -11,13 +11,13 @@ import java.util.List;
 
 public class ProgRepository implements CrudRepository<Programador, Integer> {
     CheckNulls cn = new CheckNulls();
+
     @Override
     public List<Programador> findAll() throws SQLException {
         String query = "SELECT * FROM programador";
         DataBaseController db = DataBaseController.getInstance();
         db.open();
-        ResultSet result = db.select(query).orElseThrow(() -> new SQLException("Error ProgRepository al consultar " +
-                "registros de Programador"));
+        ResultSet result = db.select(query).orElseThrow(() -> new SQLException("Error ProgRepository al consultar registros de Programador"));
         ArrayList<Programador> list = new ArrayList<Programador>();
         while (result.next()) {
             list.add(
@@ -44,7 +44,7 @@ public class ProgRepository implements CrudRepository<Programador, Integer> {
         String query = "SELECT * FROM programador where id = ?";
         DataBaseController db = DataBaseController.getInstance();
         db.open();
-        ResultSet result = db.select(query, id).orElseThrow(() -> new SQLException("Error al consultar programador con ID" + id));
+        ResultSet result = db.select(query, id).orElseThrow(() -> new SQLException("Error al consultar programador con ID: " + id));
         if (result.next()) {
             Programador prog = new Programador(
                     result.getInt("id"),
@@ -61,13 +61,12 @@ public class ProgRepository implements CrudRepository<Programador, Integer> {
             db.close();
             return prog;
         } else
-            throw new SQLException("Error no existe programador con id: " + id);
-
+            throw new SQLException("Error no existe programador con ID: " + id);
     }
 
     @Override
     public Programador save(Programador programador) throws SQLException {
-        String query = "INSERT INTO programador VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO programador VALUES (?, ?, ?, ?, ?, ?, ?, ? ,?, ?)";
         DataBaseController db = DataBaseController.getInstance();
         db.open();
         ResultSet res = db.insert(query, programador.getId(), programador.getIdEquipo(), programador.getIdDpt(), programador.getCommits(), programador.getIdComite(), programador.getIssues(), programador.getNombre(), programador.getExperto(), programador.getFecha_alta(), programador.getSalario()).orElseThrow(() -> new SQLException("Error ProgRepository al insertar Programador"));
@@ -76,17 +75,31 @@ public class ProgRepository implements CrudRepository<Programador, Integer> {
             db.close();
             return programador;
         } else
-            throw new SQLException("Error ProgRepository al insertar usuario en BD");
+            throw new SQLException("Error ProgRepository al insertar programador en BD");
     }
 
     @Override
     public Programador update(Programador programador) throws SQLException {
-        return null;
+        String query = "UPDATE programador SET nombre = ? WHERE id = ?";
+        DataBaseController db = DataBaseController.getInstance();
+        db.open();
+        int res = db.update(query, programador.getNombre(), programador.getId());
+        db.close();
+        if (res > 0)
+            return programador;
+        else
+            throw new SQLException("Error ProgRepository al actualizar programador con id: " + programador.getId());
     }
 
     @Override
     public Programador delete(Programador programador) throws SQLException {
-        return null;
+        String query = "DELETE FROM programador WHERE id = ?";
+        DataBaseController db = DataBaseController.getInstance();
+        db.open();
+        int res = db.delete(query, programador.getId());
+        db.close();
+        if (res > 0)
+            return programador;
+        throw new SQLException("Error ProgRepository al borrar programador con id: " + programador.getId());
     }
-
 }
