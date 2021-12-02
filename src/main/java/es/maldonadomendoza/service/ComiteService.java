@@ -11,6 +11,7 @@ import java.util.List;
 
 public class ComiteService extends BaseService<Comite, Integer, ComiteRepository> {
     ComiteMapper mapper = new ComiteMapper();
+
     public ComiteService(ComiteRepository repository) {
         super(repository);
     }
@@ -18,19 +19,22 @@ public class ComiteService extends BaseService<Comite, Integer, ComiteRepository
     public List<ComiteDTO> getAllComites() throws SQLException {
         return mapper.toDTO(this.findAll());
     }
+
     public ComiteDTO getComiteById(Integer id) throws SQLException {
         return mapper.toDTO(this.getById(id));
     }
+
     public ComiteDTO updateComite(ComiteDTO comiteDTO) throws
-    SQLException {
+            SQLException {
         Comite re = this.update(mapper.fromDTO(comiteDTO));
         return mapper.toDTO(re);
     }
-        public ComiteDTO deleteComite(ComiteDTO comiteDTO) throws SQLException {
-            Comite re = this.delete(mapper.fromDTO(comiteDTO));
-            return mapper.toDTO(re);
-        }
+
+    public ComiteDTO deleteComite(ComiteDTO comiteDTO) throws SQLException {
+        Comite re = this.delete(mapper.fromDTO(comiteDTO));
+        return mapper.toDTO(re);
     }
+}
 
 
 

@@ -15,11 +15,11 @@ public class JefeService extends BaseService<Jefe, Integer, JefeRepository> {
         super(repository);
     }
 
-    public List<JefeDTO> getAllJefes() throws SQLException{
+    public List<JefeDTO> getAllJefes() throws SQLException {
         return mapper.toDTO(this.findAll());
     }
 
-    public JefeDTO getJefeById(Integer id) throws SQLException{
+    public JefeDTO getJefeById(Integer id) throws SQLException {
         return mapper.toDTO(this.getById(id));
     }
 
@@ -28,7 +28,7 @@ public class JefeService extends BaseService<Jefe, Integer, JefeRepository> {
         return mapper.toDTO(jf);
     }
 
-    public JefeDTO deleteJefe(JefeDTO jefeDTO) throws SQLException{
+    public JefeDTO deleteJefe(JefeDTO jefeDTO) throws SQLException {
         Jefe jf = this.delete(mapper.fromDTO(jefeDTO));
         return mapper.toDTO(jf);
     }
