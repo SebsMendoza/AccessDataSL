@@ -62,7 +62,6 @@ public class ProgRepository implements CrudRepository<Programador, Integer> {
             return prog;
         } else
             throw new SQLException("Error no existe programador con ID: " + id);
-
     }
 
     @Override
