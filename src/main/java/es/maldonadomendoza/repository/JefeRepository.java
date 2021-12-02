@@ -68,11 +68,26 @@ public class JefeRepository implements CrudRepository<Jefe, Integer> {
 
     @Override
     public Jefe update(Jefe jefe) throws SQLException {
-        return null;
+        String query = "UPDATE jefe SET id_prog = ? WHERE id = ?";
+        DataBaseController db = DataBaseController.getInstance();
+        db.open();
+        int result = db.update(query, jefe.getIdProg(), jefe.getIdJefe());
+        db.close();
+        if (result > 0)
+            return jefe;
+        else
+            throw new SQLException("Error JefeRepository al actualizar jefe con id: " + jefe.getIdJefe());
     }
 
     @Override
     public Jefe delete(Jefe jefe) throws SQLException {
-        return null;
+        String query = "DELETE FROM jefe WHERE id = ?";
+        DataBaseController db = DataBaseController.getInstance();
+        db.open();
+        int result = db.delete(query, jefe.getIdJefe());
+        db.close();
+        if (result > 0)
+            return jefe;
+        throw new SQLException("Error JefeRepository al borrar jefe con id: " + jefe.getIdJefe());
     }
 }
