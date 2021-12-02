@@ -4,10 +4,14 @@ import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import lombok.Builder;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 
+@Data
+@Builder
 public class ProgDTO {
     ExclusionStrategy strategy = new ExclusionStrategy() {
         @Override
