@@ -9,8 +9,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class Departamento {
-    private long id;
-    private long idJefeDpt;
+    private int id;
+    private int idJefeDpt;
     private String nombre;
     private double presupuesto;
     private List<String> finalizado;

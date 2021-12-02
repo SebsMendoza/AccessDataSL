@@ -11,10 +11,10 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class Commit {
-    private long id;
-    private long idProg;
+    private int id;
+    private int idProg;
     private Repositorio repositorio;
-    private long idProyecto;
+    private int idProyecto;
     private Issue Issues;
     private String titulo;
     private String texto;

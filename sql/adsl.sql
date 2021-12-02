@@ -311,7 +311,7 @@ CREATE TABLE jefe
 (
     id          INT PRIMARY KEY,
     id_proyecto INT,
-    id_prog,
+    id_prog     INT,
     id_issue    TEXT
 );
 INSERT INTO jefe (id, id_proyecto, id_prog, id_issue)
@@ -335,17 +335,17 @@ VALUES (8, 8, 23, '27 28 29');
 DROP TABLE IF EXISTS programador;
 CREATE TABLE programador
 (
-    id           INT PRIMARY KEY,
-    id_equipo    INT,
-    id_dpt       INT,
-    id_commit    TEXT,
-    id_comite    TEXT,
-    id_issue     TEXT,
-    nombre       STRING,
-    password     STRING,
-    experto      STRING,
-    fecha_alta   DATE,
-    salario      DOUBLE
+    id         INT PRIMARY KEY,
+    id_equipo  INT,
+    id_dpt     INT,
+    id_commit  TEXT,
+    id_comite  TEXT,
+    id_issue   TEXT,
+    nombre     STRING,
+    password   STRING,
+    experto    STRING,
+    fecha_alta DATE,
+    salario    DOUBLE
 );
 INSERT INTO programador (id, id_equipo, id_dpt, id_commit, id_comite, id_issue, nombre, password, experto, fecha_alta,
                          salario)

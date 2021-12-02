@@ -10,10 +10,10 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class Proyecto {
-    private long id;
-    private long idJefe;
+    private int id;
+    private int idJefe;
     private List<String> equipos;
-    private long idDpt;
+    private int idDpt;
     private List<String> repositorios;
     private String nombre;
     private double presupuesto;

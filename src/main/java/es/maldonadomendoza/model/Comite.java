@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class Comite {
-    private long id;
+    private int id;
     private List<String> programadores;
     private Issue issues;
 

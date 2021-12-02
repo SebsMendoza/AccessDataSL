@@ -11,10 +11,10 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class Programador {
-    private long id;
-    private long idEquipo;
-    private long idDpt;
-    private long idComite;
+    private int id;
+    private int idEquipo;
+    private int idDpt;
+    private int idComite;
     private List<String> commits;
     private List<String> issues;
     private String nombre;

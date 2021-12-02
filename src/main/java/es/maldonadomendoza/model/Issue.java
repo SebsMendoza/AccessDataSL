@@ -10,8 +10,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class Issue {
-    private long id;
-    private long idJefe;
+    private int id;
+    private int idJefe;
     private List<String> commits;
     private Repositorio repositorio;
     private Comite programadores;
