@@ -2,12 +2,14 @@ package es.maldonadomendoza.model;
 
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class Issue {
     private int id;
@@ -23,4 +25,5 @@ public class Issue {
 
     public Issue(int id, int id_jefe, int id_commit, int id_repo, int id_comite, String titulo, List<String> texto, Date fecha, boolean estado) {
     }
+
 }

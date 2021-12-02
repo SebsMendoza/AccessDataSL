@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class Programador {
     private int id;
