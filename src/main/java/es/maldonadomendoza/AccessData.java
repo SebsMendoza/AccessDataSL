@@ -1,11 +1,14 @@
 package es.maldonadomendoza;
 
+import es.maldonadomendoza.controller.IssueController;
 import es.maldonadomendoza.database.DataBaseController;
+import es.maldonadomendoza.dto.IssueDTO;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
 
 public class AccessData {
@@ -53,5 +56,23 @@ public class AccessData {
             System.err.println("Error al leer el fichero de datos iniciales: " + e.getMessage());
             System.exit(1);
         }
+    }
+
+    public void Issue(){
+
+        IssueController issueController = IssueController.getInstance();
+
+        System.out.println("Get Todas las issues");
+        System.out.println(issueController.getAllIssuesJSON());
+
+        System.out.println("Get Issue con ID = 2");
+        System.out.println(issueController.getIssueByIdJSON(2));
+
+        System.out.println("UPDATE Issue con ID = 4");
+        IssueDTO issueDTO = IssueDTO.builder()
+                .id(4)
+                .texto("Prueba update")
+                .build();
+        System.out.println(issueController);
     }
 }
