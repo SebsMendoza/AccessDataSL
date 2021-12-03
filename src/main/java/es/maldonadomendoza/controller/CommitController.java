@@ -24,7 +24,7 @@ public class CommitController {
         return controller;
     }
 
-    public String getAllIssuesJSON() {
+    public String getAllCommitsJSON() {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
@@ -36,7 +36,7 @@ public class CommitController {
         }
     }
 
-    public String getIssueByIdJSON(Integer id) {
+    public String getCommitByIdJSON(Integer id) {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
@@ -48,7 +48,7 @@ public class CommitController {
         }
     }
 
-    public String updateIssueJSON(CommitDTO commitDTO) {
+    public String updateCommitJSON(CommitDTO commitDTO) {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
@@ -60,7 +60,7 @@ public class CommitController {
         }
     }
 
-    public String deleteIssue(CommitDTO commitDTO) {
+    public String deleteCommitJSON(CommitDTO commitDTO) {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()

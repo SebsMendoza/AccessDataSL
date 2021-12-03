@@ -60,7 +60,7 @@ public class EquipoController {
         }
     }
 
-    public String deleteEquipo(EquipoDTO equipoDTO) {
+    public String deleteEquipoJSON(EquipoDTO equipoDTO) {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
