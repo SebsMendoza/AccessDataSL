@@ -3,9 +3,11 @@ package es.maldonadomendoza.dto;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import es.maldonadomendoza.model.Issue;
+import es.maldonadomendoza.model.Repositorio;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Data

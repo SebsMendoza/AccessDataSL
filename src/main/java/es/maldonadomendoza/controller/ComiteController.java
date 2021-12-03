@@ -23,7 +23,7 @@ public class ComiteController {
         return controller;
     }
 
-    public String getAllCommitsJSON(){
+    public String getAllComiteJSON(){
         try{
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
@@ -45,7 +45,7 @@ public class ComiteController {
             return "Error IssueController en getIssueById: " + e.getMessage();
         }
     }
-    public String updateIssueJSON(ComiteDTO comiteDTO) {
+    public String updateComiteJSON(ComiteDTO comiteDTO) {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
@@ -57,7 +57,7 @@ public class ComiteController {
         }
     }
 
-    public String deleteIssue(ComiteDTO comiteDTO) {
+    public String deleteComiteJSON(ComiteDTO comiteDTO) {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
