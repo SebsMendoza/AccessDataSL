@@ -60,7 +60,7 @@ public class IssueController {
         }
     }
 
-    public String deleteIssue(IssueDTO issueDTO) {
+    public String deleteIssueJSON(IssueDTO issueDTO) {
         try {
             final Gson prettyGson = new GsonBuilder()
                     .setPrettyPrinting()
