@@ -4,7 +4,6 @@ import es.maldonadomendoza.database.DataBaseController;
 import es.maldonadomendoza.model.Issue;
 import es.maldonadomendoza.utils.CheckNulls;
 
-import javax.xml.transform.Result;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;

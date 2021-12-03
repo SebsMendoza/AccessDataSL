@@ -2,7 +2,6 @@ package es.maldonadomendoza.repository;
 
 import es.maldonadomendoza.database.DataBaseController;
 import es.maldonadomendoza.model.Departamento;
-import es.maldonadomendoza.utils.CheckNulls;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
