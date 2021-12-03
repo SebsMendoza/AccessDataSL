@@ -13,17 +13,7 @@ import java.util.List;
 @Data
 @Builder
 public class ProgDTO {
-    ExclusionStrategy strategy = new ExclusionStrategy() {
-        @Override
-        public boolean shouldSkipField(FieldAttributes field) {
-            return field.getName().startsWith("password");
-        }
-
-        @Override
-        public boolean shouldSkipClass(Class<?> aClass) {
-            return false;
-        }
-    };
+    ExclusionStrategy strategy;
     private int id;
     private int idEquipo;
     private int idDpt;

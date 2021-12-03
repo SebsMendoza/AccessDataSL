@@ -15,20 +15,20 @@ public class DepartamentoService extends BaseService<Departamento, Integer, Depa
         super(repository);
     }
 
-    public List<DepartamentoDTO> getAllCommits() throws SQLException {
+    public List<DepartamentoDTO> getAllDepartamentos() throws SQLException {
         return mapper.toDTO(this.findAll());
     }
 
-    public DepartamentoDTO getRepoById(Integer id) throws SQLException {
+    public DepartamentoDTO getDepartamentoById(Integer id) throws SQLException {
         return mapper.toDTO(this.getById(id));
     }
 
-    public DepartamentoDTO updateRepo(DepartamentoDTO DepartamentoDTO) throws SQLException {
+    public DepartamentoDTO updateDepartamento(DepartamentoDTO DepartamentoDTO) throws SQLException {
         Departamento re = this.update(mapper.fromDTO(DepartamentoDTO));
         return mapper.toDTO(re);
     }
 
-    public DepartamentoDTO deleteRepo(DepartamentoDTO departamentoDTO) throws SQLException {
+    public DepartamentoDTO deleteDepartamento(DepartamentoDTO departamentoDTO) throws SQLException {
         Departamento re = this.delete(mapper.fromDTO(departamentoDTO));
         return mapper.toDTO(re);
     }

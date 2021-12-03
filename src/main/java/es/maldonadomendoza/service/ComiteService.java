@@ -3,7 +3,6 @@ package es.maldonadomendoza.service;
 import es.maldonadomendoza.dto.ComiteDTO;
 import es.maldonadomendoza.mapper.ComiteMapper;
 import es.maldonadomendoza.model.Comite;
-import es.maldonadomendoza.model.Repositorio;
 import es.maldonadomendoza.repository.ComiteRepository;
 
 import java.sql.SQLException;

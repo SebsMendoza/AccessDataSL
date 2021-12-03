@@ -2,7 +2,6 @@ package es.maldonadomendoza.repository;
 
 import es.maldonadomendoza.database.DataBaseController;
 import es.maldonadomendoza.model.Equipo;
-import es.maldonadomendoza.model.Programador;
 import es.maldonadomendoza.utils.CheckNulls;
 
 import java.sql.ResultSet;

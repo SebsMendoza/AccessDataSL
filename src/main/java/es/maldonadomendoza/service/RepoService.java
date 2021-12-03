@@ -2,16 +2,10 @@ package es.maldonadomendoza.service;
 
 import es.maldonadomendoza.dto.RepoDTO;
 import es.maldonadomendoza.mapper.RepoMapper;
-import es.maldonadomendoza.model.Issue;
-import es.maldonadomendoza.model.Proyecto;
 import es.maldonadomendoza.model.Repositorio;
-import es.maldonadomendoza.repository.IssueRepository;
-import es.maldonadomendoza.repository.ProyectoRepository;
 import es.maldonadomendoza.repository.RepoRepository;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class RepoService extends BaseService<Repositorio, Integer, RepoRepository> {
