@@ -8,7 +8,6 @@ import es.maldonadomendoza.database.DataBaseController;
 import es.maldonadomendoza.dto.CommitDTO;
 import es.maldonadomendoza.dto.EquipoDTO;
 import es.maldonadomendoza.dto.IssueDTO;
-
 import es.maldonadomendoza.controller.*;
 import es.maldonadomendoza.database.DataBaseController;
 import es.maldonadomendoza.dto.*;

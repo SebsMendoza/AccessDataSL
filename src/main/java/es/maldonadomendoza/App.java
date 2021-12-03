@@ -13,5 +13,7 @@ public class App {
         adsl.Repositorio();
         adsl.Jefe();
         adsl.Programador();
+        adsl.Commit();
+        adsl.Equipo();
     }
 }
